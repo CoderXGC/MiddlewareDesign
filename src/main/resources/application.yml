@@ -2,6 +2,6 @@ server:
   port: 8081
 
 # 白名单用户
-ylesb:
+bugstack:
   whitelist:
     users: aaa
