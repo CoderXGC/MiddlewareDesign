@@ -1,4 +1,4 @@
-package com.ylesb.test.controller;
+package com.ylesb.middleware.whitelist.test.controller;
 /**
  * @title: UserController
  * @projectName MiddlewareDesign
@@ -8,7 +8,6 @@ package com.ylesb.test.controller;
  * @date 2022/2/119:17
  */
 import com.ylesb.middleware.whitelist.annotation.DoWhiteList;
-import com.ylesb.test.entity.UserInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,6 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @updateTime   : [2022/2/1 19:17]
  * @updateRemark : [描述说明本次修改内容] 
  */
+
 
 @RestController
 public class UserController {

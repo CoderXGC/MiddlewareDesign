@@ -1,4 +1,4 @@
-package com.ylesb.test.entity;
+package com.ylesb.middleware.whitelist.test.controller;
 /**
  * @title: UserInfo
  * @projectName MiddlewareDesign
@@ -19,8 +19,7 @@ package com.ylesb.test.entity;
  * @updateTime   : [2022/2/1 20:06]
  * @updateRemark : [描述说明本次修改内容] 
  */
-
-public class UserInfo {
+class UserInfo {
 
     //code、info可以统一定义一个类
     private String code;
@@ -86,4 +85,5 @@ public class UserInfo {
     public void setAddress(String address) {
         this.address = address;
     }
+
 }
