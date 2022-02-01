@@ -31,5 +31,6 @@ public @interface DoWhiteList {
     String key() default "";
 
     String returnJson() default "";
+
 }
 

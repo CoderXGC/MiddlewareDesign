@@ -36,7 +36,6 @@ import java.lang.reflect.Method;
  * @updateTime   : [2022/2/1 9:14]
  * @updateRemark : [描述说明本次修改内容] 
  */
-
 @Aspect
 @Component
 public class DoJoinPoint {
@@ -59,7 +58,7 @@ public class DoJoinPoint {
         // 获取字段值
         String keyValue = getFiledValue(whiteList.key(), jp.getArgs());
         logger.info("middleware whitelist handler method：{} value：{}", method.getName(), keyValue);
-        if (null == keyValue || "".equals(keyValue)){ return jp.proceed();}
+        if (null == keyValue || "".equals(keyValue)) return jp.proceed();
 
         String[] split = whiteListConfig.split(",");
 

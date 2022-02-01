@@ -21,6 +21,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @updateTime   : [2022/2/1 17:04]
  * @updateRemark : [描述说明本次修改内容] 
  */
+
 @ConfigurationProperties("bugstack.whitelist")
 public class WhiteListProperties {
 
