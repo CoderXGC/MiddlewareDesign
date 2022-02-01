@@ -1,1 +1,1 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.ylesb.config.WhiteListAutoConfigure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.ylesb.whitelist.config.WhiteListAutoConfigure
