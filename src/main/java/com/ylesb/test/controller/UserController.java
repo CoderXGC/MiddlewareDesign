@@ -7,7 +7,6 @@ package com.ylesb.test.controller;
  * @site : [www.ylesb.com]
  * @date 2022/2/119:17
  */
-import com.ylesb.middleware.whitelist.annotation.DoWhiteList;
 import com.ylesb.test.entity.UserInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
