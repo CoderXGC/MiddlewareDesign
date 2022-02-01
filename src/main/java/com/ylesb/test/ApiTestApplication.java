@@ -24,7 +24,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @updateRemark : [描述说明本次修改内容] 
  */
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.ylesb.*"})
+@ComponentScan(basePackages = {"com.ylesb.middleware.*"})
 public class ApiTestApplication {
 
     public static void main(String[] args) {
