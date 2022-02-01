@@ -1,4 +1,4 @@
-package com.ylesb.whitelist;
+package com.ylesb.middleware.whitelist;
 /**
  * @title: DoJoinPoint
  * @projectName MiddlewareDesign
@@ -9,7 +9,7 @@ package com.ylesb.whitelist;
  */
 
 import com.alibaba.fastjson.JSON;
-import com.ylesb.whitelist.annotation.DoWhiteList;
+import com.ylesb.middleware.whitelist.annotation.DoWhiteList;
 import org.apache.commons.beanutils.BeanUtils;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -41,7 +41,7 @@ public class DoJoinPoint {
     @Resource
     private String whiteListConfig;
 
-    @Pointcut("@annotation(com.ylesb.whitelist.annotation.DoWhiteList)")
+    @Pointcut("@annotation(com.ylesb.middleware.whitelist.annotation.DoWhiteList)")
     public void aopPoint() {
     }
 

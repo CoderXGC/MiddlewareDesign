@@ -1,4 +1,4 @@
-package com.ylesb.whitelist.config;
+package com.ylesb.middleware.whitelist.config;
 /**
  * @title: WhiteListProperties
  * @projectName MiddlewareDesign

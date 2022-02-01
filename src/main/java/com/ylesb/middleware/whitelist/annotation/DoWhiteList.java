@@ -1,4 +1,4 @@
-package com.ylesb.whitelist.annotation;
+package com.ylesb.middleware.whitelist.annotation;
 /**
  * @title: DoWhiteList
  * @projectName MiddlewareDesign
