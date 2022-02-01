@@ -15,10 +15,13 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
+
 import javax.annotation.Resource;
 import java.lang.reflect.Method;
 
@@ -34,6 +37,8 @@ import java.lang.reflect.Method;
  * @updateRemark : [描述说明本次修改内容] 
  */
 
+@Aspect
+@Component
 public class DoJoinPoint {
 
     private Logger logger = LoggerFactory.getLogger(DoJoinPoint.class);
