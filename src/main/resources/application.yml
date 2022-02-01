@@ -4,4 +4,4 @@ server:
 # 白名单用户
 ylesb:
   whitelist:
-    users: aaa,111,xiaofuge
+    users: aaa
