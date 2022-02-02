@@ -1,4 +1,4 @@
-package com.ylesb.middleware.whitelist.test;
+package com.ylesb.middleware.test;
 /**
  * @title: ApiTestApplication
  * @projectName MiddlewareDesign
@@ -11,6 +11,7 @@ package com.ylesb.middleware.whitelist.test;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * @className    : ApiTestApplication
@@ -23,8 +24,11 @@ import org.springframework.context.annotation.ComponentScan;
  * @updateTime   : [2022/2/1 19:59]
  * @updateRemark : [描述说明本次修改内容] 
  */
+//@SpringBootApplication
+//@ComponentScan(basePackages = {"com.ylesb.middleware.*"})
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.ylesb.middleware.*"})
+@Configuration
+@ComponentScan(basePackages = {"com.ylesb.middleware"})
 public class ApiTestApplication {
 
     public static void main(String[] args) {

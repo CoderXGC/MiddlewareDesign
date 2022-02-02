@@ -1,4 +1,4 @@
-package com.ylesb.middleware.whitelist.test.controller;
+package com.ylesb.middleware.test.controller;
 /**
  * @title: UserController
  * @projectName MiddlewareDesign
@@ -38,12 +38,12 @@ public class UserController {
      * 通过：http://localhost:8081/api/queryUserInfo?userId=aaa
      * 拦截：http://localhost:8081/api/queryUserInfo?userId=123
      */
-    //@DoWhiteList(key = "userId", returnJson = "{\"code\":\"1111\",\"info\":\"非白名单可访问用户拦截！\"}")
-    //@RequestMapping(path = "/api/queryUserInfoWhiteList", method = RequestMethod.GET)
-    //public UserInfo queryUserInfoWhiteList(@RequestParam String userId) {
-    //    logger.info("查询用户信息，userId：{}", userId);
-    //    return new UserInfo("虫虫:" + userId, 19, "天津市东丽区万科赏溪苑14-0000");
-    //}
+    @DoWhiteList(key = "userId", returnJson = "{\"code\":\"1111\",\"info\":\"非白名单可访问用户拦截！\"}")
+    @RequestMapping(path = "/api/queryUserInfoWhiteList", method = RequestMethod.GET)
+    public UserInfo queryUserInfoWhiteList(@RequestParam String userId) {
+        logger.info("查询用户信息，userId：{}", userId);
+        return new UserInfo("虫虫:" + userId, 19, "天津市东丽区万科赏溪苑14-0000");
+    }
     /**
      * 测试：http://localhost:8081/api/queryUserInfo?userId=aaa
      */

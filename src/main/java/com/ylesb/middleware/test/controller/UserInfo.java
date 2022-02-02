@@ -1,4 +1,4 @@
-package com.ylesb.middleware.whitelist.test.controller;
+package com.ylesb.middleware.test.controller;
 /**
  * @title: UserInfo
  * @projectName MiddlewareDesign
