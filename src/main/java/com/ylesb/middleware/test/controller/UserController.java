@@ -51,7 +51,7 @@ public class UserController {
     @RequestMapping(path = "/api/queryUserInfoHystrix", method = RequestMethod.GET)
     public UserInfo queryUserInfoHystrix(@RequestParam String userId) throws InterruptedException {
         logger.info("查询用户信息，userId：{}", userId);
-        Thread.sleep(1000);
+       // Thread.sleep(1000);
         return new UserInfo("虫虫:" + userId, 19, "天津市东丽区万科赏溪苑14-0000");
     }
 
