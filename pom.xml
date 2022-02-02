@@ -66,6 +66,14 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/src/lib/whitelist-spring-boot-starter.jar</systemPath>
         </dependency>
+        <!-- 服务治理，熔断 -->
+        <dependency>
+            <groupId>com.ylesb.middleware</groupId>
+            <artifactId>hystrix-spring-boot-starter</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/lib/hystrix-spring-boot-starter.jar</systemPath>
+        </dependency>
     </dependencies>
 
     <build>
