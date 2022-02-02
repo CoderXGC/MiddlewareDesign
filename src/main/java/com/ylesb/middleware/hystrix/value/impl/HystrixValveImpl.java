@@ -12,7 +12,7 @@ import com.alibaba.fastjson.JSON;
 import com.netflix.hystrix.*;
 import com.ylesb.middleware.hystrix.annotation.DoHystrix;
 import com.ylesb.middleware.hystrix.value.IValveService;
-import jdk.nashorn.internal.objects.annotations.Setter;
+
 import org.aspectj.lang.ProceedingJoinPoint;
 
 import java.lang.reflect.Method;
