@@ -121,7 +121,7 @@
                 </executions>
             </plugin>
             <!-- 将hystrix打包到Jar中 -->
-            <!--<plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <executions>
@@ -139,7 +139,7 @@
                         </includes>
                     </artifactSet>
                 </configuration>
-            </plugin>-->
+            </plugin>
         </plugins>
     </build>
 </project>
