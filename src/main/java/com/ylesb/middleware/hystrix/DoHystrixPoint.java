@@ -38,7 +38,7 @@ import java.lang.reflect.Method;
 @Component
 public class DoHystrixPoint {
 
-    @Pointcut("@annotation(cn.bugstack.middleware.hystrix.annotation.DoHystrix)")
+    @Pointcut("@annotation(com.ylesb.middleware.hystrix.annotation.DoHystrix)")
     public void aopPoint() {
     }
 
