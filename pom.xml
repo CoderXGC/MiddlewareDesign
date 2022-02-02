@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.ylesb</groupId>
-    <artifactId>MiddlewareDesign</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>com.ylesb.middleware</groupId>
+    <artifactId>hystrix-spring-boot-starter</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
 
     <packaging>jar</packaging>
 
@@ -38,7 +38,13 @@
         <dependency>
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>
-            <version>1.9.2</version>
+            <version>1.8.3</version>
+        </dependency>
+        <!-- hystrix-core -->
+        <dependency>
+            <groupId>com.netflix.hystrix</groupId>
+            <artifactId>hystrix-core</artifactId>
+            <version>1.5.9</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -51,10 +57,11 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <build>
-        <finalName>whitelist-spring-boot-starter</finalName>
+        <finalName>hystrix-spring-boot-starter</finalName>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
@@ -113,7 +120,26 @@
                     </execution>
                 </executions>
             </plugin>
+            <!-- 将hystrix打包到Jar中 -->
+            <!--<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <artifactSet>
+                        <includes>
+                            <include>com.netflix.hystrix:hystrix-core:jar:</include>
+                        </includes>
+                    </artifactSet>
+                </configuration>
+            </plugin>-->
         </plugins>
     </build>
-
 </project>
