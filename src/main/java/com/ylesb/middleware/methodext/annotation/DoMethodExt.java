@@ -1,4 +1,4 @@
-package com.ylesb.middleware.whitelist.annotation;
+package com.ylesb.middleware.methodext.annotation;
 /**
  * @title: DoWhiteList
  * @projectName MiddlewareDesign
@@ -26,11 +26,10 @@ import java.lang.annotation.Target;
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface DoWhiteList {
-
-    String key() default "";
-
+public @interface DoMethodExt {
+    String method() default "";
     String returnJson() default "";
 
 }
+
 
