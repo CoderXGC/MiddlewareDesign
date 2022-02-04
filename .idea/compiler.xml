@@ -7,12 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="MiddlewareDesign" />
+        <module name="whitelist-spring-boot-starter" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="MiddlewareDesign" options="-parameters" />
+      <module name="whitelist-spring-boot-starter" options="-parameters" />
     </option>
   </component>
 </project>
