@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.ylesb.middleware.whitelist</groupId>
-    <artifactId>whitelist-spring-boot-starter</artifactId>
+    <groupId>com.ylesb.middleware</groupId>
+    <artifactId>mybatis</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
     <packaging>jar</packaging>
@@ -36,9 +36,26 @@
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
         <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.26</version>
+        </dependency>
+        <dependency>
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>
             <version>1.8.3</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/dom4j/dom4j -->
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/jaxen/jaxen -->
+        <dependency>
+            <groupId>jaxen</groupId>
+            <artifactId>jaxen</artifactId>
+            <version>1.1.6</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -54,7 +71,7 @@
     </dependencies>
 
     <build>
-        <finalName>whitelist-spring-boot-starter</finalName>
+        <finalName>mybatis</finalName>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
