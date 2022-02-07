@@ -8,6 +8,10 @@ package com.ylesb.middleware.mybatis.spring;
  * @date 2022/2/710:59
  */
 
+
+import com.ylesb.middleware.mybatis.Resources;
+import com.ylesb.middleware.mybatis.SqlSessionFactory;
+import com.ylesb.middleware.mybatis.SqlSessionFactoryBuilder;
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.InitializingBean;
 

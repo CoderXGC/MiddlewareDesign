@@ -2,68 +2,39 @@ package com.ylesb.middleware.mybatis.spring.test;
 
 
 import com.alibaba.fastjson.JSON;
-import com.ylesb.middleware.mybatis.spring.Resources;
-import com.ylesb.middleware.mybatis.spring.SqlSession;
-import com.ylesb.middleware.mybatis.spring.SqlSessionFactory;
-import com.ylesb.middleware.mybatis.spring.SqlSessionFactoryBuilder;
+import com.ylesb.middleware.mybatis.Resources;
+import com.ylesb.middleware.mybatis.spring.test.dao.IUserDao;
 import com.ylesb.middleware.mybatis.spring.test.po.User;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.yaml.snakeyaml.Yaml;
 
+import java.io.IOException;
 import java.io.Reader;
 import java.util.List;
+import java.util.Map;
 
-/**
- * 博客：https://bugstack.cn - 沉淀、分享、成长，让自己和他人都能有所收获！
- * 公众号：bugstack虫洞栈
- * Create by 小傅哥(fustack)
- */
 public class ApiTest {
 
+    private Logger logger = LoggerFactory.getLogger(ApiTest.class);
+
     @Test
-    public void test_queryUserInfoById() {
-        String resource = "mybatis-config-datasource.xml";
-        Reader reader;
-        try {
-            reader = Resources.getResourceAsReader(resource);
-            SqlSessionFactory sqlMapper = new SqlSessionFactoryBuilder().build(reader);
-
-            SqlSession session = sqlMapper.openSession();
-            try {
-                User user = session.selectOne("com.ylesb.middleware.mybatis.test.dao.IUserDao.queryUserInfoById", 1L);
-                System.out.println(JSON.toJSONString(user));
-            } finally {
-                session.close();
-                reader.close();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
+    public void test_ClassPathXmlApplicationContext() {
+        BeanFactory beanFactory = new ClassPathXmlApplicationContext("spring-config.xml");
+        IUserDao userDao = beanFactory.getBean("IUserDao", IUserDao.class);
+        User user = userDao.queryUserInfoById(1L);
+        logger.info("测试结果：{}", JSON.toJSONString(user));
     }
 
     @Test
-    public void test_queryUserList() {
-        String resource = "mybatis-config-datasource.xml";
-        Reader reader;
-        try {
-            reader = Resources.getResourceAsReader(resource);
-            SqlSessionFactory sqlMapper = new SqlSessionFactoryBuilder().build(reader);
-
-            SqlSession session = sqlMapper.openSession();
-            try {
-                User req = new User();
-                req.setUserNickName("");
-                List<User> userList = session.selectList("com.ylesb.middleware.mybatis.test.dao.IUserDao.queryUserList", req);
-                System.out.println(JSON.toJSONString(userList));
-            } finally {
-                session.close();
-                reader.close();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void test_yml() throws IOException {
+        Reader reader = Resources.getResourceAsReader("application.yml");
+        Map map = (Map) new Yaml().load(reader);
+        System.out.println(map.toString());
+        System.out.println(((Map)((Map)map.get("mybatis")).get("datasource")).get("basePackage"));
     }
-
-
 
 }
