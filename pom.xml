@@ -66,10 +66,13 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
+        <!-- 自定义mybatis-->
         <dependency>
-            <groupId>cn.bugstack.middleware</groupId>
-            <artifactId>mybatis</artifactId>
+            <groupId>com.ylesb.middleware</groupId>
+            <artifactId>methodext-spring-boot-starter</artifactId>
             <version>1.0.0-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/lib/methodext-spring-boot-starter.jar</systemPath>
         </dependency>
     </dependencies>
 
