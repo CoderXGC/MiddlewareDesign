@@ -1,27 +1,24 @@
-package com.ylesb.middleware.mybatis;
+package com.ylesb.middleware.mybatis.spring;
 /**
- * @title: SqlSessionFactory
+ * @title: MapperScannerConfigurer
  * @projectName MiddlewareDesign
  * @description: TODO
  * @author White
  * @site : [www.ylesb.com]
- * @date 2022/2/79:53
+ * @date 2022/2/710:58
  */
 
 /**
- * @className    : SqlSessionFactory
+ * @className    : MapperScannerConfigurer
  * @description  : [描述说明该类的功能]  
  * @author       : [XuGuangchao]
  * @site         : [www.ylesb.com]
  * @version      : [v1.0]
- * @createTime   : [2022/2/7 9:53]
+ * @createTime   : [2022/2/7 10:58]
  * @updateUser   : [XuGuangchao]
- * @updateTime   : [2022/2/7 9:53]
+ * @updateTime   : [2022/2/7 10:58]
  * @updateRemark : [描述说明本次修改内容] 
  */
 
-public interface SqlSessionFactory {
-
-    SqlSession openSession();
-
+public class MapperScannerConfigurer {
 }

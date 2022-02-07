@@ -1,4 +1,4 @@
-package com.ylesb.middleware.mybatis.test.po;
+package com.ylesb.middleware.mybatis.spring.test.po;
 
 import java.time.LocalDateTime;
 import java.util.Date;

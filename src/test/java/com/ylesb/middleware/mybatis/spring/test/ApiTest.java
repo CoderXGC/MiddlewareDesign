@@ -1,12 +1,12 @@
-package com.ylesb.middleware.mybatis.test;
+package com.ylesb.middleware.mybatis.spring.test;
 
 
 import com.alibaba.fastjson.JSON;
-import com.ylesb.middleware.mybatis.Resources;
-import com.ylesb.middleware.mybatis.SqlSession;
-import com.ylesb.middleware.mybatis.SqlSessionFactory;
-import com.ylesb.middleware.mybatis.SqlSessionFactoryBuilder;
-import com.ylesb.middleware.mybatis.test.po.User;
+import com.ylesb.middleware.mybatis.spring.Resources;
+import com.ylesb.middleware.mybatis.spring.SqlSession;
+import com.ylesb.middleware.mybatis.spring.SqlSessionFactory;
+import com.ylesb.middleware.mybatis.spring.SqlSessionFactoryBuilder;
+import com.ylesb.middleware.mybatis.spring.test.po.User;
 import org.junit.Test;
 
 import java.io.Reader;
